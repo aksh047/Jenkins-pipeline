@@ -5,13 +5,13 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull the latest code from GitHub
-                git 'https://github.com/aksh047/Jenkins-pipeline.git'
+                 git branch: 'main', git 'https://github.com/aksh047/Jenkins-pipeline.git'
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('Question3-image')
+                    docker.build('aksh047/Question3-image')
                 }
             }
         }
