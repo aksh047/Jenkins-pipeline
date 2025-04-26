@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull the latest code from GitHub
-                 git branch: 'main', git 'https://github.com/aksh047/Jenkins-pipeline.git'
+                 git branch: 'main', url: 'https://github.com/aksh047/Jenkins-pipeline.git'
             }
         }
         stage('Build Docker Image') {
