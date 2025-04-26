@@ -1,0 +1,10 @@
+services:
+  question2dockerfile:
+    image: question2dockerfile
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3000:3000
