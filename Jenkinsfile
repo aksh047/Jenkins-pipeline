@@ -11,7 +11,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build('aksh047/Question3-image')
+                    docker.build('aksh047/question3-image')
                 }
             }
         }
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
-                        docker.image('Question3-image').push()
+                        docker.image('question3-image').push()
                     }
                 }
             }
