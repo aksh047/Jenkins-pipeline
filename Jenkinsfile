@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Pull the latest code from GitHub
-                 git branch: 'main', url: 'https://github.com/aksh047/Jenkins-pipeline.git'
+                git branch: 'main', url: 'https://github.com/aksh047/Jenkins-pipeline.git'
             }
         }
         stage('Build Docker Image') {
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-credentials') {
-                        docker.image('question3-image').push()
+                        docker.image('aksh047/question3-image').push()
                     }
                 }
             }
